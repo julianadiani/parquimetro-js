@@ -32,7 +32,7 @@ class Parquimetro {
 
     mostrarResultado() {
         const valor = parseFloat(document.getElementById("valorInserido").value);
-        this.calcularTempo(valor);
+        this.calcularValor(valor);
 
         if (this.valor < 1.00) {
             document.getElementById('resultado').innerHTML = `Valor insuficiente!`;
