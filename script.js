@@ -11,20 +11,21 @@ class Parquimetro {
     calcularValor(valor) {
         this.valorInserido = valor;
 
-        if(valor >= this._precoPor30Minutos) {
-            this.tempo = 30;
-            this.valor =  this._precoPor30Minutos;
-        } else if (valor >= this._precoPorHora) {
-            this.tempo = 60;
-            this.valor =  this._precoPorHora;
-        } else if (valor >= this._precoPor2Horas) {
+        if (valor >= this._precoPor2Horas) {
             this.tempo = 120;
             this.valor = this._precoPor2Horas;
+        } else if (valor >= this._precoPorHora) {
+            this.tempo = 60;
+            this.valor = this._precoPorHora;
+        } else if (valor >= this._precoPor30Minutos) {
+            this.tempo = 30;
+            this.valor = this._precoPor30Minutos;
         } else {
             this.tempo = 0;
             this.valor = 0;
         }
     }
+
 
     calcularTroco() {
         return this.valorInserido - this.valor;
